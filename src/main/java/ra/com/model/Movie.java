@@ -1,7 +1,6 @@
 package ra.com.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,7 +21,6 @@ public class Movie {
     private String title;
     private int duration;
     private String genre;
-    @Pattern(regexp = "yyyy-MM-dd")
     private LocalDate releaseDate;
     private String image;
 }

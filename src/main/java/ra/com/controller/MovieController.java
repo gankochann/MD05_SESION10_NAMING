@@ -23,7 +23,7 @@ public class MovieController {
     }
 
     @PostMapping("/api/v1/manager/movies/add")
-    public ResponseEntity<?> addMovie(@RequestBody MovieDto movieDto) {
+    public ResponseEntity<?> addMovie(@ModelAttribute MovieDto movieDto) {
         Movie movie = movieService.save(movieDto);
         if(movie != null){
             return new ResponseEntity<>(movie,HttpStatus.CREATED);
